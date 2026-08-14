@@ -1,1 +1,82 @@
-omo 
+/* Page Background */
+body {
+  background-color: pink;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+.game-header h1 {
+  color: black;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Button Styling (White background, Black font) */
+button, .game-btn, .square {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #333333;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.game-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+/* Button Glow Effect on Click / Active */
+button:active, 
+button:focus, 
+button.glowing {
+  box-shadow: 0 0 15px 5px #ffffff, 0 0 25px 8px #ff69b4;
+  transform: scale(0.98);
+}
+
+/* Chessboard Layout */
+.chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  grid-template-rows: repeat(8, 60px);
+  border: 4px solid #333333;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Chess Squares as Buttons */
+.square {
+  width: 60px;
+  height: 60px;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+}
+
+/* Alternating square colors for board readability */
+.square.dark-square {
+  background-color: #f0f0f0;
+}
+
+.square.selected {
+  box-shadow: inset 0 0 12px #ff1493, 0 0 15px #ffffff;
+  border-color: #ff1493;
+}
